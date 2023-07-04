@@ -3,27 +3,12 @@ import { nanoid } from 'nanoid';
 import NoteList from './components/NotesList/NotesList';
 import Search from './components/SearchBar/SearchBar';
 import Header from './components/Header/Header';
+import { FaSun, FaMoon } from 'react-icons/fa';
 
 const App = () => {
-  const [notes, setNotes] = useState([{
-    id: nanoid(),
-    text:'Firs Note',
-    date:'05/02/1984',
-    },
-    {
-    id: nanoid(),
-    text:'Second Note',
-    date:'05/02/1984',
-    },
-    {
-    id: nanoid(),
-    text:'Third Note',
-    date:'05/02/1984',
-    },
-  ]);  
-
+  const [notes, setNotes] = useState([]);  
+  
   const [searchText, setSearchText] = useState(''); 
-
   const [darkMode, setDarkMode] = useState(false); 
 
   useEffect(()=>{
@@ -58,9 +43,9 @@ const App = () => {
   }
 
   return (
-    <div className={`${darkMode && 'dark-mode'}`}>
+    <div className={`${darkMode ? 'dark-mode' : ''}`}>
       <div className='container'>
-        <Header handleToggleDarkMode={setDarkMode} />
+        <Header handleToggleDarkMode={setDarkMode} icon={darkMode ? <FaSun /> : <FaMoon />} />
         <Search handleSearchNote={ setSearchText } />
         <NoteList 
           notes={ notes.filter((note)=> 

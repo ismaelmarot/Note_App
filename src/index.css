@@ -22,10 +22,9 @@ code {
 
 }
 .dark-mode{
-  background-color: #222222;
+  background-color: rgba(34, 34, 34, 1);
 }
 
 .dark-mode h1{
-  color: white;
+  color: rgba(249, 245, 246), 1;
 }
-

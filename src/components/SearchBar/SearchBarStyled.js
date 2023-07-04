@@ -11,5 +11,4 @@ export const SearchBarStyled = styled.div`
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-
 `;

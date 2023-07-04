@@ -1,11 +1,14 @@
-import React from "react";
-import { HeaderStyled } from "./HeaderStyled";
+import React from 'react';
+import { HeaderStyled } from './HeaderStyled';
+import { ButtonToggleStyled } from './ButtonToggleStyled';
+import { FaSun, FaMoon } from 'react-icons/fa';
 
-const Header = ({ handleToggleDarkMode }) =>{
+const Header = ({ handleToggleDarkMode, icon }) =>{
+    
     return(
         <HeaderStyled className="header">
             <h1>Notes App</h1>
-            <button 
+            <ButtonToggleStyled 
                 onClick={()=> 
                     handleToggleDarkMode(
                         (previousDarkMode)=> !previousDarkMode
@@ -13,8 +16,8 @@ const Header = ({ handleToggleDarkMode }) =>{
                 }
                 className="toggle-btn"
             >
-                Toggle Mode
-            </button>
+            {icon}   
+            </ButtonToggleStyled>
         </HeaderStyled>
     )
 }
