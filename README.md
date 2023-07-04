@@ -14,7 +14,7 @@ A simple Note App
 ------------
 #### SCREENSHOTS
 
-![ezgif com-video-to-gif](https://github.com/ismaelmarot/Quiz_App/blob/main/img/img_02.png)
+![ezgif com-video-to-gif](https://github.com/ismaelmarot/Note_App/blob/main/src/screens/NoteApp_screenshot_01.png)
 
 ![ezgif com-video-to-gif](https://github.com/ismaelmarot/Note_App/blob/main/src/screens/NoteApp_screenshot_02.png)
 
