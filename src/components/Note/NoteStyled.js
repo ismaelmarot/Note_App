@@ -1,8 +1,10 @@
-.note {
+import styled from 'styled-components';
+
+export const NoteStyled = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgba(254, 246, 138, 1);
+    background-color: rgba(225, 236, 200, 1);
     padding: 1rem;
     min-height: 170px;
     border-radius: 10px;
@@ -11,15 +13,11 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     white-space: pre-wrap;
-}
 
-.note-footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
 
 .delete-icon{
     size: 1.3em;
     cursor: pointer;
 }
+`;

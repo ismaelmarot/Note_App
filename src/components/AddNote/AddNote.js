@@ -1,7 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
 
-import '../Note/Note.css';
+import { HiOutlineSave } from 'react-icons/hi';
+
+import { NoteFooterStyled } from '../Note/NoteFooterStyled';
+import { NoteStyled } from '../Note/NoteStyled';
+
 import './AddNote.css';
 
 const AddNote = ({ handleAddNote }) => {
@@ -22,7 +26,7 @@ const AddNote = ({ handleAddNote }) => {
     }
 
     return(
-        <div className='note new-note'>
+        <NoteStyled className='note new-note'>
             <textarea 
                 className='text-area' 
                 rows='8' 
@@ -31,11 +35,15 @@ const AddNote = ({ handleAddNote }) => {
                 value={ noteText }
                 onChange={ handleChange }    
             ></textarea>
-            <div className='note-footer'>
+            <NoteFooterStyled>
                 <small>{ characterLimit - noteText.length } Remaining</small>
-                <button className='save-button' onClick={ handleSaveClick }>Save</button>
-            </div>
-        </div>
+                
+                
+                <button className='save-button' onClick={ handleSaveClick }>
+                    <HiOutlineSave size={20} color="black" />
+                </button>
+            </NoteFooterStyled>
+        </NoteStyled>
     )
 }
 

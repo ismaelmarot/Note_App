@@ -1,9 +1,9 @@
 import React from "react";
-import './Header.css';
+import { HeaderStyled } from "./HeaderStyled";
 
 const Header = ({ handleToggleDarkMode }) =>{
     return(
-        <div className="header">
+        <HeaderStyled className="header">
             <h1>Notes App</h1>
             <button 
                 onClick={()=> 
@@ -15,7 +15,7 @@ const Header = ({ handleToggleDarkMode }) =>{
             >
                 Toggle Mode
             </button>
-        </div>
+        </HeaderStyled>
     )
 }
 

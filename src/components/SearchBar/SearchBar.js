@@ -1,17 +1,18 @@
 import React from 'react';
 import { MdSearch } from'react-icons/md';
-import './SearchBar.css';
+import { SearchBarStyled } from './SearchBarStyled';
+import { SearchBarInputStyled } from './SearchBarInputStyled';
 
 const Search = ({ handleSearchNote }) =>{
     return(
-        <div className='search'>
+        <SearchBarStyled className='search'>
             <MdSearch className='search-icon' />
-            <input 
+            <SearchBarInputStyled
                 onChange={(event) => handleSearchNote(event.target.value)}
                 type='text' 
                 placeholder='Type to search...' 
             />
-        </div>
+        </SearchBarStyled>
     );
 }
 

@@ -1,19 +1,20 @@
 import React from 'react';
 import { MdDeleteForever } from 'react-icons/md';
-import './Note.css';
+import { NoteStyled } from './NoteStyled';
+import { NoteFooterStyled } from './NoteFooterStyled';
 
 const Note = ({id, text, date, handleDeleteNote }) => {
     return(
-        <div className='note'>
+        <NoteStyled>
             <span>{ text }</span>
-            <div className='note-footer'>
+            <NoteFooterStyled>
                 <small>{ date }</small>
                 <MdDeleteForever 
                     onClick={()=> handleDeleteNote(id)} 
                     className='delete-icon'
                 />
-            </div>
-        </div>
+            </NoteFooterStyled>
+        </NoteStyled>
     )
 }
 
